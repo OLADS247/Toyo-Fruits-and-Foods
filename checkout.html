@@ -1,0 +1,972 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Complete your order with Toyo Foods & Fruits."
+    >
+
+    <title>Checkout | Toyo Foods & Fruits</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- =====================================================
+         GLOBAL CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/style.css"
+    >
+
+
+    <!-- =====================================================
+         CHECKOUT CSS
+    ====================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="css/checkout.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+
+        <div class="container header-container">
+
+
+            <!-- BRAND -->
+
+            <a
+                href="index.html"
+                class="brand-logo"
+            >
+
+                <span class="brand-name">
+                    Toyo
+                </span>
+
+                <span class="brand-subtitle">
+                    Foods & Fruits
+                </span>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav
+                class="main-nav"
+                aria-label="Main navigation"
+            >
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="products.html">
+                    Menu
+                </a>
+
+                <a href="cart.html">
+                    Cart
+                </a>
+
+            </nav>
+
+
+            <!-- CART -->
+
+            <a
+                href="cart.html"
+                class="header-cart"
+                aria-label="Shopping cart"
+            >
+
+                🛒
+
+                <span
+                    id="cart-count"
+                    class="cart-count"
+                >
+                    0
+                </span>
+
+            </a>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CHECKOUT PAGE
+    ====================================================== -->
+
+    <main class="checkout-page">
+
+
+        <!-- =================================================
+             PAGE INTRO
+        ================================================== -->
+
+        <section class="checkout-hero">
+
+            <div class="container">
+
+                <span class="section-label">
+                    TOYO FOODS & FRUITS
+                </span>
+
+                <h1>
+                    Complete Your Order
+                </h1>
+
+                <p>
+                    Make your payment, enter your delivery
+                    details and submit your order for verification.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CHECKOUT CONTENT
+        ================================================== -->
+
+        <section class="checkout-section">
+
+            <div class="container">
+
+                <div class="checkout-layout">
+
+
+                    <!-- =====================================
+                         LEFT SIDE
+                         SHIPPING DETAILS
+                    ====================================== -->
+
+                    <div class="checkout-left">
+
+
+                        <!-- SHIPPING FORM -->
+
+                        <div class="checkout-card">
+
+
+                            <div class="checkout-card-header">
+
+                                <div class="step-number">
+                                    01
+                                </div>
+
+                                <div>
+
+                                    <h2>
+                                        Shipping Details
+                                    </h2>
+
+                                    <p>
+                                        Tell us where to deliver your order.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <form
+                                id="checkout-form"
+                                novalidate
+                            >
+
+
+                                <!-- FULL NAME -->
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="customer-name"
+                                    >
+                                        Full Name
+                                        <span>*</span>
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        id="customer-name"
+                                        name="customerName"
+                                        placeholder="Enter your full name"
+                                        autocomplete="name"
+                                        required
+                                    >
+
+                                    <small
+                                        class="form-error"
+                                        id="customer-name-error"
+                                    ></small>
+
+                                </div>
+
+
+
+                                <!-- PHONE -->
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="customer-phone"
+                                    >
+                                        Phone / WhatsApp Number
+                                        <span>*</span>
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        id="customer-phone"
+                                        name="customerPhone"
+                                        placeholder="e.g. 08012345678"
+                                        autocomplete="tel"
+                                        required
+                                    >
+
+                                    <small
+                                        class="form-error"
+                                        id="customer-phone-error"
+                                    ></small>
+
+                                </div>
+
+
+
+                                <!-- DELIVERY AREA -->
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="delivery-area"
+                                    >
+                                        Delivery Area
+                                        <span>*</span>
+                                    </label>
+
+                                    <select
+                                        id="delivery-area"
+                                        name="deliveryArea"
+                                        required
+                                    >
+
+                                        <option
+                                            value=""
+                                        >
+                                            Select delivery area
+                                        </option>
+
+                                        <option
+                                            value="Ago-Iwoye"
+                                        >
+                                            Ago-Iwoye
+                                        </option>
+
+                                        <option
+                                            value="Ijebu-Igbo"
+                                        >
+                                            Ijebu-Igbo
+                                        </option>
+
+                                        <option
+                                            value="Ijebu-Ode"
+                                        >
+                                            Ijebu-Ode
+                                        </option>
+
+                                        <option
+                                            value="Sagamu"
+                                        >
+                                            Sagamu
+                                        </option>
+
+                                        <option
+                                            value="Lagos"
+                                        >
+                                            Lagos — On Request
+                                        </option>
+
+                                        <option
+                                            value="Other"
+                                        >
+                                            Other Nearby Location
+                                        </option>
+
+                                    </select>
+
+                                    <small class="form-hint">
+                                        Delivery fees vary depending on your location.
+                                    </small>
+
+                                    <small
+                                        class="form-error"
+                                        id="delivery-area-error"
+                                    ></small>
+
+                                </div>
+
+
+
+                                <!-- DELIVERY ADDRESS -->
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="delivery-address"
+                                    >
+                                        Full Delivery Address
+                                        <span>*</span>
+                                    </label>
+
+                                    <textarea
+                                        id="delivery-address"
+                                        name="deliveryAddress"
+                                        rows="4"
+                                        placeholder="Enter your complete delivery address"
+                                        required
+                                    ></textarea>
+
+                                    <small
+                                        class="form-error"
+                                        id="delivery-address-error"
+                                    ></small>
+
+                                </div>
+
+
+
+                                <!-- ORDER NOTES -->
+
+                                <div class="form-group">
+
+                                    <label
+                                        for="order-notes"
+                                    >
+                                        Order Notes
+                                        <small>
+                                            Optional
+                                        </small>
+                                    </label>
+
+                                    <textarea
+                                        id="order-notes"
+                                        name="orderNotes"
+                                        rows="3"
+                                        placeholder="Anything we should know about your order?"
+                                    ></textarea>
+
+                                </div>
+
+
+
+                                <!-- =================================
+                                     PAYMENT REFERENCE
+                                ================================== -->
+
+                                <div class="payment-reference-section">
+
+
+                                    <div class="payment-reference-header">
+
+                                        <div class="step-number">
+                                            02
+                                        </div>
+
+                                        <div>
+
+                                            <h2>
+                                                Payment Verification
+                                            </h2>
+
+                                            <p>
+                                                Enter the reference shown on your payment receipt.
+                                            </p>
+
+                                        </div>
+
+                                    </div>
+
+
+
+                                    <!-- TRANSACTION ID -->
+
+                                    <div class="form-group">
+
+                                        <label
+                                            for="transaction-id"
+                                        >
+                                            Transaction / Reference ID
+                                            <span>*</span>
+                                        </label>
+
+                                        <input
+                                            type="text"
+                                            id="transaction-id"
+                                            name="transactionId"
+                                            placeholder="Enter your transaction/reference ID"
+                                            autocomplete="off"
+                                            required
+                                        >
+
+                                        <small class="form-hint">
+                                            This is usually shown on your bank transfer receipt or transaction confirmation.
+                                        </small>
+
+                                        <small
+                                            class="form-error"
+                                            id="transaction-id-error"
+                                        ></small>
+
+                                    </div>
+
+
+
+                                    <!-- CONFIRMATION -->
+
+                                    <label
+                                        class="payment-confirmation"
+                                    >
+
+                                        <input
+                                            type="checkbox"
+                                            id="payment-confirmation"
+                                            name="paymentConfirmation"
+                                            required
+                                        >
+
+                                        <span>
+
+                                            I confirm that I have made the payment
+                                            and entered the correct transaction/reference ID.
+
+                                        </span>
+
+                                    </label>
+
+
+                                </div>
+
+
+
+                                <!-- SUBMIT -->
+
+                                <button
+                                    type="submit"
+                                    id="submit-order"
+                                    class="submit-order-button"
+                                >
+
+                                    <span>
+                                        Submit Order for Verification
+                                    </span>
+
+                                    <span>
+                                        →
+                                    </span>
+
+                                </button>
+
+
+                                <p class="submit-note">
+
+                                    Your order will remain
+                                    <strong>Pending Verification</strong>
+                                    until Toyo Foods & Fruits confirms your payment.
+
+                                </p>
+
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         RIGHT SIDE
+                         PAYMENT INFORMATION
+                    ====================================== -->
+
+                    <aside class="checkout-right">
+
+
+                        <!-- PAYMENT CARD -->
+
+                        <div class="payment-card">
+
+
+                            <div class="payment-card-header">
+
+                                <span class="payment-icon">
+                                    ₦
+                                </span>
+
+                                <div>
+
+                                    <span class="section-label">
+                                        PAYMENT
+                                    </span>
+
+                                    <h2>
+                                        Bank Transfer
+                                    </h2>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- PAYMENT INSTRUCTION -->
+
+                            <div class="payment-instruction">
+
+                                <strong>
+                                    1. Make your payment
+                                </strong>
+
+                                <p>
+                                    Transfer the exact food total
+                                    shown below to the Toyo Foods &
+                                    Fruits account.
+                                </p>
+
+                            </div>
+
+
+
+                            <!-- BANK DETAILS -->
+
+                            <div class="bank-details">
+
+
+                                <div class="bank-detail">
+
+                                    <span>
+                                        Bank
+                                    </span>
+
+                                    <strong id="bank-name">
+                                        BANK NAME
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bank-detail">
+
+                                    <span>
+                                        Account Name
+                                    </span>
+
+                                    <strong>
+                                        Taiwo Oluwadamilola Omotoyosi
+                                    </strong>
+
+                                </div>
+
+
+                                <div class="bank-detail account-number-row">
+
+                                    <span>
+                                        Account Number
+                                    </span>
+
+                                    <div class="account-number-wrapper">
+
+                                        <strong
+                                            id="account-number"
+                                        >
+                                            0000000000
+                                        </strong>
+
+                                        <button
+                                            type="button"
+                                            id="copy-account"
+                                            class="copy-account-button"
+                                        >
+                                            Copy
+                                        </button>
+
+                                    </div>
+
+                                </div>
+
+
+                                <div class="bank-detail amount-row">
+
+                                    <span>
+                                        Amount to Pay
+                                    </span>
+
+                                    <strong>
+                                        ₦<span
+                                            id="payment-total"
+                                        >
+                                            0
+                                        </span>
+                                    </strong>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                            <!-- TRANSACTION ID INSTRUCTIONS -->
+
+                            <div class="transaction-help">
+
+
+                                <div class="help-icon">
+                                    ?
+                                </div>
+
+
+                                <div>
+
+                                    <h3>
+                                        Where do I find my Transaction ID?
+                                    </h3>
+
+                                    <p>
+                                        After making your payment,
+                                        open your bank's transaction
+                                        receipt or payment confirmation.
+                                    </p>
+
+                                    <p>
+                                        Look for a field such as
+                                        <strong>
+                                            Transaction ID,
+                                            Transaction Reference,
+                                            Transfer Reference,
+                                            Session ID
+                                        </strong>
+                                        or a similar payment reference.
+                                    </p>
+
+                                    <p>
+                                        Copy that reference and enter
+                                        it in the Transaction / Reference
+                                        ID field on the left.
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+
+
+                            <!-- WARNING -->
+
+                            <div class="verification-warning">
+
+                                <span>
+                                    ⚠️
+                                </span>
+
+                                <p>
+                                    <strong>
+                                        Important:
+                                    </strong>
+
+                                    Your payment will be manually
+                                    verified before your order is processed.
+                                    Please enter the correct reference.
+                                </p>
+
+                            </div>
+
+
+                        </div>
+
+
+
+                        <!-- ORDER SUMMARY -->
+
+                        <div class="checkout-order-summary">
+
+
+                            <div class="summary-header">
+
+                                <h2>
+                                    Your Order
+                                </h2>
+
+                                <a
+                                    href="cart.html"
+                                >
+                                    Edit Cart
+                                </a>
+
+                            </div>
+
+
+                            <div
+                                id="checkout-items"
+                                class="checkout-items"
+                            >
+                                <!-- JavaScript -->
+                            </div>
+
+
+                            <div class="summary-divider"></div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Items
+                                </span>
+
+                                <strong
+                                    id="checkout-item-count"
+                                >
+                                    0
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Food Total
+                                </span>
+
+                                <strong>
+                                    ₦<span
+                                        id="checkout-subtotal"
+                                    >
+                                        0
+                                    </span>
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-row">
+
+                                <span>
+                                    Delivery
+                                </span>
+
+                                <strong>
+                                    Confirmed after verification
+                                </strong>
+
+                            </div>
+
+
+                            <div class="summary-total">
+
+                                <span>
+                                    Food Total
+                                </span>
+
+                                <strong>
+                                    ₦<span
+                                        id="checkout-total"
+                                    >
+                                        0
+                                    </span>
+                                </strong>
+
+                            </div>
+
+
+                        </div>
+
+
+                    </aside>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- BRAND -->
+
+                <div class="footer-brand">
+
+                    <h2>
+                        Toyo Foods & Fruits
+                    </h2>
+
+                    <p>
+                        Delicious meals, fresh fruits and
+                        quality food prepared with love.
+                    </p>
+
+                </div>
+
+
+
+                <!-- CONTACT -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Contact Us
+                    </h3>
+
+                    <a href="tel:09012777231">
+                        📱 09012777231
+                    </a>
+
+                    <a href="tel:07044228605">
+                        📞 07044228605
+                    </a>
+
+                    <a href="mailto:oluwadamilolat964@gmail.com">
+                        ✉️ oluwadamilolat964@gmail.com
+                    </a>
+
+                </div>
+
+
+
+                <!-- LOCATION -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Location
+                    </h3>
+
+                    <p>
+                        📍 Ago-Iwoye,
+                        Ogun State, Nigeria.
+                    </p>
+
+                    <p>
+                        Delivery available to
+                        nearby locations.
+                    </p>
+
+                </div>
+
+
+
+                <!-- SOCIAL -->
+
+                <div class="footer-column">
+
+                    <h3>
+                        Follow Us
+                    </h3>
+
+                    <a
+                        href="https://www.instagram.com/toyofoodsandfruits"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Instagram
+                    </a>
+
+                    <a
+                        href="https://www.tiktok.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        TikTok
+                    </a>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="footer-bottom">
+
+                <p>
+                    © 2026 Toyo Foods & Fruits.
+                    All rights reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         CHECKOUT JAVASCRIPT
+    ====================================================== -->
+
+    <script src="js/checkout.js"></script>
+
+</body>
+
+</html>

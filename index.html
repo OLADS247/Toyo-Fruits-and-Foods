@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shop delicious meals, proteins, fruits, parfaits, soups, noodles, pasta, small chops and more from Toyo Foods And Fruits.">
+    <meta name="keywords" content="Toyo Foods And Fruits, food delivery Ago-Iwoye, Nigerian food, Jollof Rice, Fried Rice, White Rice, Turkey, Chicken, Fruits, Parfait, Soups, Small Chops">
+    <meta name="author" content="Toyo Foods And Fruits">
+    <meta name="theme-color" content="#b00020">
+    <title>Menu | Toyo Foods And Fruits</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container navbar">
+        <a href="index.html" class="logo">
+            <span class="logo-main">TOYO</span>
+            <span class="logo-sub">Foods & Fruits</span>
+        </a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="products.html" class="active">Menu</a>
+            <a href="#categories">Categories</a>
+            <a href="cart.html" class="cart-link">
+                🛒 Cart
+                <span id="cart-count">0</span>
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="menu-hero">
+        <div class="container">
+            <span class="section-label">TOYO FOODS & FRUITS</span>
+            <h1>What are you <span>ordering today?</span></h1>
+            <p>Freshly prepared meals, proteins, fruits, parfaits, soups and more.</p>
+            <div class="search-box">
+                <input type="search" id="search-input" placeholder="Search for jollof rice, turkey, fruits..." aria-label="Search products">
+                <button type="button" id="search-btn" aria-label="Search">🔍</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="categories-section" id="categories">
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">BROWSE MENU</span>
+                    <h2>Food Categories</h2>
+                </div>
+            </div>
+            <div class="category-list">
+                <button class="category-filter active" data-category="all">All</button>
+                <button class="category-filter" data-category="rice">🍚 Rice & Meals</button>
+                <button class="category-filter" data-category="pasta">🍝 Pasta & Noodles</button>
+                <button class="category-filter" data-category="yam">🍠 Yam & Porridge</button>
+                <button class="category-filter" data-category="breakfast">🥞 Breakfast</button>
+                <button class="category-filter" data-category="protein">🍗 Proteins</button>
+                <button class="category-filter" data-category="soups">🍲 Soups & Stews</button>
+                <button class="category-filter" data-category="fruits">🍓 Fruits</button>
+                <button class="category-filter" data-category="parfait">🥗 Parfait</button>
+                <button class="category-filter" data-category="snacks">🥟 Small Chops</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section" id="all-menu">
+        <div class="container">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">OUR MENU</span>
+                    <h2>All Meals</h2>
+                </div>
+                <span class="product-count" id="product-count">Showing all items</span>
+            </div>
+
+            <div class="product-grid" id="product-grid">
+
+                <!-- RICE & MEALS -->
+                <article class="product-card" data-category="rice" data-name="Jollof Rice and Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e7b2c5e6d8e0?w=800&q=80" alt="Jollof Rice and Protein" loading="lazy">
+                        <span class="product-badge">Popular</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rice & Meals</span>
+                        <h3>Jollof Rice & Protein</h3>
+                        <p>Delicious Nigerian-style jollof rice served with your choice of protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦6,500</span>
+                            <button class="add-cart" data-product="Jollof Rice & Protein" data-price="6500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="rice" data-name="Fried Rice and Protein">
+                    <div class="product-image">
+                        <img src="https://answersafrica.com/wp-content/uploads/2016/02/nigerian-fried-rice.jpg" alt="Fried Rice and Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rice & Meals</span>
+                        <h3>Fried Rice & Protein</h3>
+                        <p>Freshly prepared fried rice served with your choice of protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦6,500</span>
+                            <button class="add-cart" data-product="Fried Rice & Protein" data-price="6500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="rice" data-name="White Rice and Stew">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1516684669134-de6f7c473a2a?w=800&q=80" alt="White Rice and Stew" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rice & Meals</span>
+                        <h3>White Rice & Stew</h3>
+                        <p>Soft white rice with delicious stew and your choice of protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,500</span>
+                            <button class="add-cart" data-product="White Rice and Stew" data-price="5500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="rice" data-name="Native Rice with Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=800&q=80" alt="Native Rice with Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Rice & Meals</span>
+                        <h3>Native Rice & Protein</h3>
+                        <p>Traditional native-style rice served with protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,500</span>
+                            <button class="add-cart" data-product="Native Rice and Protein" data-price="5500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PASTA & NOODLES -->
+                <article class="product-card" data-category="pasta" data-name="Pasta and Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=800&q=80" alt="Pasta and Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pasta & Noodles</span>
+                        <h3>Pasta & Protein</h3>
+                        <p>Delicious pasta served with your choice of protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,500</span>
+                            <button class="add-cart" data-product="Pasta and Protein" data-price="5500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="pasta" data-name="Noodles and Egg">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=800&q=80" alt="Noodles and Egg" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pasta & Noodles</span>
+                        <h3>Noodles & Egg</h3>
+                        <p>Hot and tasty noodles served with egg.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦2,800</span>
+                            <button class="add-cart" data-product="Noodles and Egg" data-price="2800">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="pasta" data-name="Noodles and Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1612929632978-d9d548359d96?w=800&q=80" alt="Noodles and Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Pasta & Noodles</span>
+                        <h3>Noodles & Protein</h3>
+                        <p>Delicious noodles paired with a satisfying protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,500</span>
+                            <button class="add-cart" data-product="Noodles and Protein" data-price="5500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- YAM & PORRIDGE -->
+                <article class="product-card" data-category="yam" data-name="Yam and Egg">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e7b2c5e6d8e0?w=800&q=80" alt="Yam and Egg" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Yam & Porridge</span>
+                        <h3>Yam & Egg</h3>
+                        <p>Delicious yam served with tasty egg sauce.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,500</span>
+                            <button class="add-cart" data-product="Yam and Egg" data-price="5500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="yam" data-name="Pottage and Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80" alt="Pottage and Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Yam & Porridge</span>
+                        <h3>Pottage & Protein</h3>
+                        <p>Rich and hearty pottage served with your choice of protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦7,000</span>
+                            <button class="add-cart" data-product="Pottage and Protein" data-price="7000">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="yam" data-name="Porridge and Protein">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80" alt="Porridge and Protein" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Yam & Porridge</span>
+                        <h3>Porridge & Protein</h3>
+                        <p>Warm, filling porridge served with delicious protein.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦6,500</span>
+                            <button class="add-cart" data-product="Porridge and Protein" data-price="6500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- BREAKFAST -->
+                <article class="product-card" data-category="breakfast" data-name="Pancakes and Scrambled Eggs">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1528207776546-365bb710ee93?w=800&q=80" alt="Pancakes and Scrambled Eggs" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Breakfast</span>
+                        <h3>Pancakes & Scrambled Eggs</h3>
+                        <p>Fluffy pancakes served with delicious scrambled eggs.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦4,500</span>
+                            <button class="add-cart" data-product="Pancakes and Scrambled Eggs" data-price="4500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="breakfast" data-name="Egg and Plantain">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604329760661-e7b2c5e6d8e0?w=800&q=80" alt="Egg and Plantain" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Breakfast</span>
+                        <h3>Egg & Plantain</h3>
+                        <p>Sweet fried plantain served with tasty egg.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦4,500</span>
+                            <button class="add-cart" data-product="Egg and Plantain" data-price="4500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PROTEINS -->
+                <article class="product-card" data-category="protein" data-name="Peppered Turkey">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1604503468506-a8da13d82791?w=800&q=80" alt="Peppered Turkey" loading="lazy">
+                        <span class="product-badge">Favourite</span>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Proteins</span>
+                        <h3>Peppered Turkey</h3>
+                        <p>Deliciously seasoned and perfectly cooked turkey.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦4,000</span>
+                            <button class="add-cart" data-product="Peppered Turkey" data-price="4000">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="protein" data-name="Chicken">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1598103442097-8b74394b95c6?w=800&q=80" alt="Chicken" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Proteins</span>
+                        <h3>Chicken</h3>
+                        <p>Tender, deliciously prepared chicken.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦3,500</span>
+                            <button class="add-cart" data-product="Chicken" data-price="3500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- FRUITS -->
+                <article class="product-card" data-category="fruits" data-name="Fruit Pack">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=800&q=80" alt="Fresh Fruit Pack" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fruits</span>
+                        <h3>Fresh Fruit Pack</h3>
+                        <p>Freshly selected fruits packed for a healthy and delicious treat.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦2,500</span>
+                            <button class="add-cart" data-product="Fruit Pack" data-price="2500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="product-card" data-category="fruits" data-name="Fruit Salad">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1564093497595-593b96d80180?w=800&q=80" alt="Fresh Fruit Salad" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Fruits</span>
+                        <h3>Fresh Fruit Salad</h3>
+                        <p>A refreshing mix of fresh, delicious fruits.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦2,500</span>
+                            <button class="add-cart" data-product="Fruit Salad" data-price="2500">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- PARFAIT -->
+                <article class="product-card" data-category="parfait" data-name="Parfait">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80" alt="Toyo Foods Parfait" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Parfait</span>
+                        <h3>Parfait</h3>
+                        <p>Creamy, delicious and refreshing parfait made with quality ingredients.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦3,000</span>
+                            <button class="add-cart" data-product="Parfait" data-price="3000">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SOUPS & STEWS -->
+                <article class="product-card" data-category="soups" data-name="Soups and Stews">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80" alt="Soups and Stews" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Soups & Stews</span>
+                        <h3>Soups & Stews</h3>
+                        <p>Different kinds of delicious homemade soups and stews.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦4,000</span>
+                            <button class="add-cart" data-product="Soups and Stews" data-price="4000">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- SMALL CHOPS -->
+                <article class="product-card" data-category="snacks" data-name="Small Chops">
+                    <div class="product-image">
+                        <img src="https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=800&q=80" alt="Small Chops" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Snacks</span>
+                        <h3>Small Chops</h3>
+                        <p>Delicious bite-sized treats perfect for events and everyday enjoyment.</p>
+                        <div class="product-bottom">
+                            <span class="price">₦5,000</span>
+                            <button class="add-cart" data-product="Small Chops" data-price="5000">+ Add</button>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="delivery-section">
+        <div class="container">
+            <div class="delivery-content">
+                <span class="section-label">DELIVERY</span>
+                <h2>We deliver your food to you.</h2>
+                <p>Delivery charges vary depending on your location and will be confirmed before your order is processed.</p>
+                <div class="delivery-areas">
+                    <span>📍 Ago-Iwoye</span>
+                    <span>📍 Ijebu-Igbo</span>
+                    <span>📍 Ijebu-Ode</span>
+                    <span>📍 Sagamu</span>
+                    <span>📍 Lagos — On Request</span>
+                    <span>📍 Other Nearby Locations</span>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div class="cart-bar" id="cart-bar">
+    <div class="cart-summary">
+        <span class="cart-icon">🛒</span>
+        <div>
+            <strong><span id="cart-items">0</span> items</strong>
+            <small>Total: ₦<span id="cart-total">0</span></small>
+        </div>
+    </div>
+    <a href="cart.html" class="checkout-btn">View Cart →</a>
+</div>
+
+<footer class="footer">
+    <div class="container footer-grid">
+        <div class="footer-column footer-brand">
+            <a href="index.html" class="logo">
+                <span class="logo-main">TOYO</span>
+                <span class="logo-sub">Foods & Fruits</span>
+            </a>
+            <p>Freshly prepared meals, delicious fruits, proteins, parfaits and more.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="products.html">Menu</a>
+            <a href="cart.html">Cart</a>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Us</h3>
+            <a href="tel:09012777231">📱 09012777231</a>
+            <a href="tel:07044228605">☎️ 07044228605</a>
+            <a href="mailto:oluwadamilolat964@gmail.com">✉️ oluwadamilolat964@gmail.com</a>
+            <p>📍 Ago-Iwoye, Ogun State, Nigeria.</p>
+        </div>
+        <div class="footer-column">
+            <h3>Delivery Areas</h3>
+            <p>Ago-Iwoye</p>
+            <p>Ijebu-Igbo</p>
+            <p>Ijebu-Ode</p>
+            <p>Sagamu</p>
+            <p>Lagos — On Request</p>
+            <p>Other nearby locations</p>
+        </div>
+        <div class="footer-column">
+            <h3>Follow Toyo</h3>
+            <a href="https://www.instagram.com/toyofoodsandfruits/" target="_blank" rel="noopener noreferrer">📸 Instagram</a>
+            <a href="#" target="_blank" rel="noopener noreferrer">🎵 TikTok</a>
+            <p>@toyo_foods_and_fruits</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <p>© 2026 Toyo Foods And Fruits. All rights reserved.</p>
+            <p>Fresh food. Good food. Happy people. ❤️</p>
+        </div>
+    </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
