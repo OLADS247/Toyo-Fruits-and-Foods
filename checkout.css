@@ -8,6 +8,122 @@
 /* =========================================================
    CHECKOUT PAGE
 ========================================================= */
+/* =========================================================
+   HEADER / NAVBAR (for checkout page)
+========================================================= */
+.site-header {
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Brand Logo */
+.brand-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    line-height: 1.1;
+}
+
+.brand-name {
+    font-family: "Playfair Display", serif;
+    font-size: 24px;
+    font-weight: 800;
+    color: #171717;
+    letter-spacing: 1px;
+}
+
+.brand-subtitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: #b8860b;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Navigation Links */
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.main-nav a {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #b8860b;
+}
+
+/* Cart Button */
+.header-cart {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #f5f5f5;
+    font-size: 18px;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.header-cart:hover {
+    background: #eeeeee;
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    min-width: 18px;
+    height: 18px;
+    padding: 0 5px;
+    border-radius: 50%;
+    background: #b8860b;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+    .header-container {
+        height: 64px;
+        padding: 0 16px;
+    }
+
+    .brand-name {
+        font-size: 20px;
+    }
+
+    .main-nav {
+        display: none; /* hide links on small screens (or make a hamburger if you want) */
+    }
+}
 
 .checkout-page {
     background: #faf9f6;
